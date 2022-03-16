@@ -13,6 +13,9 @@ namespace Tesodev.Business.ValidationRules
         {
             RuleFor(u => u.CustomerId).NotEmpty();
             RuleFor(u => u.Address).NotEmpty();
+            RuleFor(c => c.Address.Country).NotEmpty();
+            RuleFor(c => c.Address.CityCode).NotEmpty();
+            RuleFor(c => c.Address.City).NotEmpty();
             RuleFor(u => u.Price).NotNull();
             RuleFor(u => u.Product).NotEmpty();
             RuleFor(u => u.Quantity).NotNull();

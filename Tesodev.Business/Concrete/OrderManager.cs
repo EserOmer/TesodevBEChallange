@@ -50,7 +50,7 @@ namespace Tesodev.Business.Concrete
                                   );
             if (result != null)
             {
-                return null;
+                return new ErrorDataResult<Guid>(result.Message);
             }
             var createdOrderId= _orderDal.Create(orderCreateDto);
             return new SuccessDataResult<Guid>(createdOrderId,Messages.TransactionSuccesful);

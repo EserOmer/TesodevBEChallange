@@ -34,7 +34,7 @@ namespace Tesodev.Api
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TESODEV", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Name = "Authorization",
@@ -42,7 +42,7 @@ namespace Tesodev.Api
                     Scheme = "Bearer",
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
-                    Description = "'Bearer' yazıp bir boşluk bırakarak anahtarınızı aşağıdaki kutucuğa yazınız.\r\n\r\nÖrnek: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
+                    Description = "'Bearer' yazıp bir bosluk bırakarak anahtarınızı asagıdaki kutucuğa yazınız.\r\n\r\nOrnek: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
                 });
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement {
                     {
